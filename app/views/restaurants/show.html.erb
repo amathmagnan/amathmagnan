@@ -1,19 +1,45 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
 
-<p>
-  <strong>Name:</strong>
-  <%= @restaurant.name %>
-</p>
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @restaurant.address %>
-</p>
+      <p>
+        <strong>Name:</strong>
+        <%= @restaurant.name %>
+      </p>
 
-<p>
-  <strong>Stars:</strong>
-  <%= @restaurant.stars %>
-</p>
+      <p>
+        <strong>Address:</strong>
+        <%= @restaurant.address %>
+      </p>
 
-<%= link_to 'Edit', edit_restaurant_path(@restaurant) %> |
-<%= link_to 'Back', restaurants_path %>
+      <p>
+        <strong>Stars:</strong>
+        <%= @restaurant.stars %>
+      </p>
+
+      <h5>Reviews</h5>
+      <ul class="list-group">
+        <% @restaurant.reviews.each do |review|%>
+
+
+      </ul>
+
+
+      <%#= link_to 'Who is the chef', chef_restaurant_path(@restaurant) %>
+
+      <br>
+
+      <%= link_to 'Edit', edit_restaurant_path(@restaurant) %>
+      <%= link_to 'Back', restaurants_path %>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+

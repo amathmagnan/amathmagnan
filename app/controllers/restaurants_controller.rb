@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: %i[ show edit update destroy, :chef ]
+  before_action :set_restaurant, only: %i[ show edit update destroy, :chef]
 
   # GET /restaurants/top les 5étoiles
   def top
@@ -12,9 +12,8 @@ class RestaurantsController < ApplicationController
  #GET /restaurants/:id/chef
  #On veut récuper le chef's name
  def chef
-    #@restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
     @chef_name = @restaurant.chef_name
-    #ca va render chef.html.erb
   end
 
   # GET /restaurants or /restaurants.json
